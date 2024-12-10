@@ -2,6 +2,7 @@ def rock_paper():
     import random
 
     choices = ('r', 'p', 's')
+    emoji={"r":'🪨',"s":'✂️',"p":'📄'}  #emojies
 
     print("Welcome to rock, paper, scissors game!")
     print("In order to win, you must beat the computer in best of 3 rounds!")
@@ -23,8 +24,8 @@ def rock_paper():
 
             computer_choice = random.choice(choices)  
 
-            print(f"Your choice is: {user_choice}")  # display choices
-            print(f"Computer's choice is: {computer_choice}")
+            print(f"Your choice is: {emoji[user_choice]}")  # display choices
+            print(f"Computer's choice is: {emoji[computer_choice]}")
 
             if user_choice == computer_choice:
                 print("It's a draw!\n")
